@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IO Checkout — Support</title>
+<meta name="description" content="Support and help for IO Checkout, the PLC I/O checkout and commissioning app for iPhone and iPad.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --ink: #14181f;
+    --ink-2: #4a5462;
+    --ink-3: #6b7686;
+    --rule: #e2e6ec;
+    --accent: #2b6cb0;
+    --green: #2f9e4f;
+    --slate: #1b222c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1319;
+      --card: #171d26;
+      --ink: #eef1f5;
+      --ink-2: #b3bcc9;
+      --ink-3: #8a94a3;
+      --rule: #262f3c;
+      --accent: #6aa9e9;
+      --slate: #0b0f14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 72px; }
+  header.masthead {
+    display: flex; align-items: center; gap: 16px;
+    padding-bottom: 24px; margin-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .icon {
+    width: 64px; height: 64px; flex: none;
+    border-radius: 14px; background: var(--slate);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #fff; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 700; font-size: 19px; line-height: 1; gap: 3px;
+  }
+  .icon .tick { color: #34c759; font-size: 17px; }
+  h1 { font-size: 25px; margin: 0 0 3px; letter-spacing: -0.01em; }
+  .tagline { color: var(--ink-3); font-size: 14px; margin: 0; }
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.07em;
+    color: var(--ink-3); margin: 40px 0 14px; font-weight: 700;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 4px 20px; margin-bottom: 16px;
+  }
+  details { border-bottom: 1px solid var(--rule); }
+  details:last-child { border-bottom: 0; }
+  summary {
+    cursor: pointer; padding: 15px 0; font-weight: 600; font-size: 15.5px;
+    list-style: none; display: flex; justify-content: space-between; gap: 14px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; color: var(--ink-3); font-weight: 400;
+    font-size: 20px; line-height: 1; flex: none;
+  }
+  details[open] summary::after { content: "\2212"; }
+  details > div { padding: 0 0 16px; color: var(--ink-2); font-size: 15px; }
+  details p { margin: 0 0 10px; }
+  details p:last-child { margin-bottom: 0; }
+  ol, ul { margin: 0 0 10px; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em; background: var(--bg); padding: 2px 5px;
+    border-radius: 4px; border: 1px solid var(--rule);
+  }
+  .contact { padding: 20px; }
+  .contact p { margin: 0 0 8px; }
+  a { color: var(--accent); }
+  .btn {
+    display: inline-block; margin-top: 6px; padding: 11px 20px;
+    background: var(--accent); color: #fff; text-decoration: none;
+    border-radius: 9px; font-weight: 600; font-size: 15px;
+  }
+  footer {
+    margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule);
+    color: var(--ink-3); font-size: 13px;
+  }
+  footer a { color: var(--ink-3); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="icon" aria-hidden="true">I/O<span class="tick">✓</span></div>
+    <div>
+      <h1>IO Checkout</h1>
+      <p class="tagline">Support &amp; help · PLC I/O checkout for iPhone and iPad</p>
+    </div>
+  </header>
+
+  <h2>Contact</h2>
+  <div class="card contact">
+    <p>Questions, bug reports and feature requests all go to the same place, and
+       a real person reads them.</p>
+    <p><a class="btn" href="mailto:dmitriy@bcdproduction.com?subject=IO%20Checkout%20support">Email Support</a></p>
+    <p style="margin-top:14px;color:var(--ink-3);font-size:14px;">
+      To help us help you faster, include your iOS version, your iPhone or iPad
+      model, and — if it involves an import — a few sample rows of the CSV
+      (with any confidential tag names changed).
+    </p>
+  </div>
+
+  <h2>Getting started</h2>
+  <div class="card">
+    <details open>
+      <summary>How do I import my I/O list?</summary>
+      <div>
+        <ol>
+          <li>In Excel, open your I/O list and choose <strong>File → Save As → CSV (Comma delimited)</strong>.</li>
+          <li>Save it somewhere the Files app can reach — iCloud Drive, or email it to yourself.</li>
+          <li>In IO Checkout, tap <strong>+ → Import I/O List (CSV)</strong> and pick the file.</li>
+          <li>Map each column to a field. The app guesses from your headers; correct anything it got wrong.</li>
+          <li>Check the preview of the first rows, then tap <strong>Import</strong>.</li>
+        </ol>
+        <p>Only the <strong>Tag</strong> column is required. Everything else is optional.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Why can't I import an .xlsx file directly?</summary>
+      <div>
+        <p>Excel workbooks can contain formulas, multiple sheets, merged cells and
+           formatting that have no single correct interpretation as an I/O list.
+           Rather than guess and silently get your data wrong, IO Checkout asks
+           for CSV, which is unambiguous.</p>
+        <p>In Excel: <strong>File → Save As → CSV (Comma delimited)</strong>. It takes a few seconds
+           and you keep full control over which sheet is used.</p>
+      </div>
+    </details>
+    <details>
+      <summary>My CSV won't import, or the columns look wrong</summary>
+      <div>
+        <ul>
+          <li>Make sure the first row contains your column headers, and that the
+              <strong>First row is headers</strong> toggle matches your file.</li>
+          <li>If tags are missing, check that the <strong>Tag</strong> field is mapped to the
+              right column — it is the only required field.</li>
+          <li>If accented characters look wrong, re-export from Excel as
+              <strong>CSV UTF-8</strong>.</li>
+          <li>Rows with no tag are skipped, and the app tells you how many.</li>
+          <li>Duplicate tags are imported, not dropped, but you get a warning so
+              you can decide.</li>
+        </ul>
+        <p>If it still won't come in, email us a few sample rows and we will look at it.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I don't have an I/O list handy — can I try it first?</summary>
+      <div>
+        <p>Yes. Go to <strong>Settings → Demo → Create Sample Project</strong>, or tap
+           <strong>Try the Sample Project</strong> on the empty screen. That builds a realistic
+           40-point demo panel — partly checked, with a failed point, an open punch
+           item and a resolved one — so you can walk the whole workflow, report
+           included, without importing anything.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2>Using it in the field</h2>
+  <div class="card">
+    <details>
+      <summary>What is Rapid Mode?</summary>
+      <div>
+        <p>A full-screen, one-point-at-a-time flow for walking a panel with a meter
+           in your other hand. Swipe right to pass, left to fail, or use the large
+           buttons. It advances automatically to the next unchecked point.</p>
+        <p>Open it from the lightning-bolt button in the Checkout toolbar. Skip
+           sends a point to the back of the queue; Undo reverses the last change.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Does it work with no signal?</summary>
+      <div>
+        <p>Completely. Everything is stored on your device and there is no server,
+           no account and no sign-in. It behaves identically inside a steel
+           enclosure in a basement and at your desk. Importing, checking points,
+           photos, punch list and PDF export all work in airplane mode.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How does the punch list keep history?</summary>
+      <div>
+        <p>Points marked Failed or Punch List collect on the Punch List tab. When
+           you resolve one, you add a note describing the fix — and the original
+           failure, its date, its note and its photos are all preserved.</p>
+        <p>Your report shows both the problem and the fix, which is what a client
+           actually wants to see. A resolved item can be reopened if it comes back.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Can I add my company logo to reports?</summary>
+      <div>
+        <p>Yes. <strong>Settings → Report Branding</strong> sets a company logo and a footer line
+           used on every report. An individual project can override the logo in
+           <strong>Edit Project Info</strong> — useful when you work under more than one brand.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2>Reports</h2>
+  <div class="card">
+    <details>
+      <summary>How do I get the report out of the app?</summary>
+      <div>
+        <p>Open a project, go to the <strong>Report</strong> tab, capture your signature if you
+           want one on the document, then tap <strong>Generate PDF Report</strong>. The standard
+           share sheet opens, so you can AirDrop it, email it, or save it to Files.</p>
+        <p><strong>Export Results CSV</strong> on the same screen sends the data back to Excel with
+           statuses, timestamps, initials, notes and punch resolutions intact.</p>
+      </div>
+    </details>
+    <details>
+      <summary>The PDF won't open, or looks damaged</summary>
+      <div>
+        <p>Make sure you are on the current version of the app — an early build
+           could write an empty file. Update from the App Store, generate the
+           report again, and it should open normally.</p>
+        <p>If a report still won't open, email us and say roughly how many points
+           and photos the project has.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Can the client sign it?</summary>
+      <div>
+        <p>The report ends with a sign-off page. Your signature is captured in the
+           app and printed there; alongside it is a blank witness line for the
+           client to sign by hand on the printed copy.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2>Trial &amp; purchase</h2>
+  <div class="card">
+    <details>
+      <summary>How does the free trial work?</summary>
+      <div>
+        <p>You get a 5-day trial with every feature unlocked. It starts when you
+           accept it on the welcome screen, not before, and nothing is charged
+           automatically — there is no subscription and nothing renews.</p>
+        <p>When the trial ends, <strong>projects you have already created stay on your
+           device and remain fully editable</strong>. You will never lose a job in
+           progress. What locks is importing, creating new projects, and exporting
+           PDF or CSV reports.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I bought the app on another device — how do I get it here?</summary>
+      <div>
+        <p>Sign in with the same Apple Account, then tap <strong>Restore Purchase</strong> on the
+           unlock screen or in <strong>About → Licence</strong>. The unlock is a one-time purchase
+           tied to your Apple Account, so it works on every device you own at no
+           extra cost.</p>
+      </div>
+    </details>
+    <details>
+      <summary>The unlock screen says the price is unavailable</summary>
+      <div>
+        <p>That means the App Store did not return the purchase. Check your network
+           connection and tap <strong>Retry</strong>. If your device is offline or the App Store is
+           having trouble, it usually clears within a few minutes.</p>
+        <p>The app never shows a made-up price — if you see no price, it genuinely
+           could not reach the store, so nothing can be charged by mistake.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How do I request a refund?</summary>
+      <div>
+        <p>Refunds are handled by Apple, not by us. Go to
+           <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>,
+           sign in with your Apple Account and choose the purchase.</p>
+        <p>If something in the app didn't work as promised, please email us first —
+           we would rather fix it.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2>Your data</h2>
+  <div class="card">
+    <details>
+      <summary>Where is my data stored, and is any of it sent anywhere?</summary>
+      <div>
+        <p>Everything stays on your device. IO Checkout has no account, no server
+           and no analytics, and it does not transmit your projects, photos or
+           reports anywhere. You share a report only when you choose to.</p>
+        <p>Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How do I back up my projects?</summary>
+      <div>
+        <p>Projects are included in your normal iPhone or iPad backup, so an iCloud
+           or Finder backup captures them. For a copy you control directly, use
+           <strong>Export Results CSV</strong> and save the file to Files, iCloud Drive or your
+           computer.</p>
+        <p>Deleting the app deletes its projects. Export anything you need to keep
+           before you delete it.</p>
+      </div>
+    </details>
+  </div>
+
+  <footer>
+    <p>IO Checkout for iPhone and iPad · Requires iOS 17 or later.<br>
+       <a href="privacy.html">Privacy Policy</a></p>
+    <p>&copy; 2026 BCDPRODUCTION LLC. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
